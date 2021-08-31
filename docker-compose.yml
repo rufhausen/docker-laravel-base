@@ -53,6 +53,7 @@ services:
   db:
     image: mysql:latest
     command: --default-authentication-plugin=mysql_native_password
+    hostname: ${DOCKER_PROJECT_NAME}-db}
     environment:
       MYSQL_ROOT_USER: root
       MYSQL_ALLOW_EMPTY_PASSWORD: "true"
