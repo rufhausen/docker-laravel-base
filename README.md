@@ -1,9 +1,7 @@
-# Laravel Docker Base (for multiple local projects)
+# Laravel Docker Base (for local projects)
 
 
-Designed to be a starting point for multiple Docker environments on local machines. Utilizes Nginx proxy to allow for local domain use without specifying ports for each (app.local, foo.local, etc.).
-
-Each project will utilize the same Nginx proxy instance.
+Designed to be a starting point for Docker environments on local machines. 
 
 ### Included Services
 - PHP 7.4
