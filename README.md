@@ -5,21 +5,14 @@ Designed to be a starting point for multiple Docker environments on local machin
 
 Each project will utilize the same Nginx proxy instance.
 
-
 ### Included Services
 - PHP 7.4
-- MySQL 8.0
+- MariaDB 10.4
 - Nginx
 - Redis
-- Nginx Proxy 
-
 
 ## Installation
-Place the files in the root of your Laravel app. Run the following command from the application root in a terminal window: `chmod +x ./docker/create-network.sh && chmod +x docker-reboot`
-
 Copy the environment variables in .env.example into your .env file. Customize as needed noting that all values defined need to be unique for each project.
-
-From a terminal window, run `./docker-reboot`. This will start the Nginx proxy if it is not already running and spin up the Docker environment. This should be the preferred method for starting and restarting your Docker environment across all projects.
 
 ## Notes
 - MySQL data files are stored on the local file system, not in Docker shared data under docker/mysql/data. Doing so *might* make it faster on MacOS and allows you to reset Docker shared data without losing your database data.
