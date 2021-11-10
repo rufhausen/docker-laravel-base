@@ -47,10 +47,10 @@ RUN apt-get install -y --no-install-recommends \
 RUN docker-php-ext-install soap zip intl bcmath pdo_mysql mysqli exif pcntl gd
 
 RUN pecl channel-update pecl.php.net \
-&& pecl install libsodium \
-&& pecl install xdebug \
-&& pecl install redis \
-&& docker-php-ext-enable redis
+    && pecl install libsodium \
+    && pecl install xdebug \
+    && pecl install redis \
+    && docker-php-ext-enable redis
 
 #Composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
@@ -67,4 +67,4 @@ RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -
 RUN PATH="$PATH:/usr/bin/zsh"
 
 # Expose port 9000
-EXPOSE 9000
+EXPOSE 9000/TCP
